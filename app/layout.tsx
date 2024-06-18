@@ -3,10 +3,11 @@ import { Inter } from "next/font/google";
 import { basehub } from "basehub";
 import { Pump } from "basehub/react-pump";
 import { ThemeProvider } from "next-themes";
-import "./globals.css";
 import { draftMode } from "next/headers";
+import { Toolbar } from "basehub/next-toolbar";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], preload: true });
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const { global } = await basehub({ next: { revalidate: 10 } }).query({
@@ -114,6 +115,7 @@ export default function RootLayout({
           }}
         </Pump>
         <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <Toolbar />
       </body>
     </html>
   );
