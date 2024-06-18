@@ -1,5 +1,6 @@
 import { Pump } from "basehub/react-pump";
 import { Nav } from "./_components/nav";
+import { draftMode } from "next/headers";
 
 export const dynamic = "force-static";
 export const revalidate = 10;
@@ -13,6 +14,8 @@ export default function Home() {
           shows: { items: { _slug: true, _id: true, _title: true } },
         },
       ]}
+      draft={draftMode().isEnabled}
+      next={{ revalidate: 10 }}
     >
       {async ([{ index, shows }]) => {
         "use server";

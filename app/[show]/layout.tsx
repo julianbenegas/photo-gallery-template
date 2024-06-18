@@ -1,5 +1,6 @@
 import { Pump } from "basehub/react-pump";
 import { Nav } from "../_components/nav";
+import { draftMode } from "next/headers";
 
 const ShowLayout = ({ children }: { children?: React.ReactNode }) => {
   return (
@@ -9,6 +10,8 @@ const ShowLayout = ({ children }: { children?: React.ReactNode }) => {
         queries={[
           { shows: { items: { _slug: true, _id: true, _title: true } } },
         ]}
+        draft={draftMode().isEnabled}
+        next={{ revalidate: 10 }}
       >
         {async ([{ shows }]) => {
           "use server";

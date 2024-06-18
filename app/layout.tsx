@@ -4,6 +4,7 @@ import { basehub } from "basehub";
 import { Pump } from "basehub/react-pump";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import { draftMode } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -80,6 +81,8 @@ export default function RootLayout({
               },
             },
           ]}
+          draft={draftMode().isEnabled}
+          next={{ revalidate: 10 }}
         >
           {async ([{ global }]) => {
             "use server";

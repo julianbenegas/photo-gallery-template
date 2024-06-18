@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Photo, PhotoFragment } from "../_components/photo";
 import { SelectedPhotoDialog } from "../_components/selected-photo-dialog";
+import { draftMode } from "next/headers";
 
 export const dynamic = "force-static";
 export const revalidate = 10;
@@ -51,6 +52,8 @@ const Page = ({ params }: Props) => {
           },
         },
       ]}
+      draft={draftMode().isEnabled}
+      next={{ revalidate: 10 }}
     >
       {async ([data]) => {
         "use server";
