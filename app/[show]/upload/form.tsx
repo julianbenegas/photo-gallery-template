@@ -59,7 +59,7 @@ const FormStatusFragment = () => {
       {status.pending
         ? `UPLOADING ${images.length} IMAGES...`
         : showSuccess
-        ? "DONE"
+        ? "DONE. MAKE SURE YOU COMMIT YOUR CHANGES IN BASEHUB.COM!"
         : ""}
     </>
   );
