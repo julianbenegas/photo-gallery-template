@@ -24,7 +24,9 @@ export const Nav = ({
   className?: string;
 }) => {
   return (
-    <nav className={clsx(className, "flex justify-center mt-1 text-sm")}>
+    <nav
+      className={clsx(className, "flex justify-center mt-1 text-sm flex-wrap")}
+    >
       {links.map((link, i, { length }) => {
         return (
           <div key={i}>

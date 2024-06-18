@@ -9,6 +9,8 @@
   -moz-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --color-accent: var(--color-accent-light);
+  --color-bg: white;
+  background-color: var(--color-bg);
 }
 
 body {
@@ -16,7 +18,7 @@ body {
 }
 
 .dark:root {
-  background-color: black;
   color: white;
   --color-accent: var(--color-accent-dark);
+  --color-bg: black;
 }

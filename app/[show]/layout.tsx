@@ -13,7 +13,7 @@ const ShowLayout = ({ children }: { children?: React.ReactNode }) => {
         {async ([{ shows }]) => {
           "use server";
           return (
-            <footer className="sticky bottom-0 p-4">
+            <footer className="sticky bottom-0 p-2 bg-bg">
               <Nav
                 links={[
                   { href: "/", children: "HOME" },

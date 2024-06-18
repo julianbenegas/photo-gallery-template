@@ -1,9 +1,7 @@
 import { basehub } from "basehub";
-import { BaseHubImage } from "basehub/next-image";
 import { Pump } from "basehub/react-pump";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { imageURLToBase64 } from "../_util/base64";
 import { Photo, PhotoFragment } from "../_components/photo";
 import { SelectedPhotoDialog } from "../_components/selected-photo-dialog";
 
@@ -61,13 +59,13 @@ const Page = ({ params }: Props) => {
         if (!show) notFound();
 
         return (
-          <div className="grid grid-cols-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {show.photos.items.map(async (photo, i) => {
               const priority = i < 10;
               return <Photo key={photo._id} {...photo} priority={priority} />;
             })}
 
-            <SelectedPhotoDialog />
+            <SelectedPhotoDialog photos={show.photos.items} />
           </div>
         );
       }}
