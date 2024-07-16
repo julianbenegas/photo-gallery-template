@@ -2,6 +2,8 @@
   "name": "photo-gallery-template",
   "version": "0.1.0",
   "private": true,
+  "repository": "https://github.com/julianbenegas/photo-gallery-template-demo",
+  "cms": "https://basehub.com/jbtc/photo-gallery-template",
   "scripts": {
     "dev": "basehub dev & next dev",
     "build": "basehub && next build",
@@ -10,7 +12,7 @@
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
-    "basehub": "^7.0.0",
+    "basehub": "^7.0.6",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
     "next": "14.2.4",

@@ -75,15 +75,15 @@ const UploadImagesToShowPage = async ({
               data: {
                 type: "instance",
                 title: null,
-                value: [
-                  {
+                value: {
+                  image: {
                     type: "image",
                     value: {
                       fileName,
                       url: uploadURL,
                     },
                   },
-                ],
+                },
               },
             };
           }),
