@@ -2,7 +2,7 @@
   "name": "photo-gallery-template",
   "version": "0.1.0",
   "private": true,
-  "repository": "https://github.com/julianbenegas/photo-gallery-template-demo",
+  "repository": "https://github.com/julianbenegas/photo-gallery-template",
   "cms": "https://basehub.com/jbtc/photo-gallery-template",
   "scripts": {
     "dev": "basehub dev & next dev",
